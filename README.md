@@ -369,6 +369,15 @@ rvm reload
 ```
 
 ---
+### Issues
+```bash
+brew install openssl@3
+rvm install 3.0.0 --with-openssl-dir=$(brew --prefix openssl@3)
+RUBY_CFLAGS="-Wno-error=implicit-function-declaration" \
+rvm reinstall 3.2.2 \
+--with-openssl-dir=/usr/local/opt/openssl@1.1
+```
+---
 
 ## 📚 Useful Links
 
@@ -380,11 +389,6 @@ rvm reload
 | Homebrew | https://brew.sh |
 | WSL 2 Setup | https://learn.microsoft.com/en-us/windows/wsl/install |
 
-### Install OpenSSL 3
-```bash
-brew install openssl@3
-rvm install 3.0.0 --with-openssl-dir=$(brew --prefix openssl@3)
-```
 ---
 
 > Made with ❤️ — covers macOS, Linux, and Windows (WSL 2)
