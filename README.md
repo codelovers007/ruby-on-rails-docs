@@ -380,6 +380,11 @@ rvm reload
 | Homebrew | https://brew.sh |
 | WSL 2 Setup | https://learn.microsoft.com/en-us/windows/wsl/install |
 
+### Install OpenSSL 3
+```bash
+brew install openssl@3
+rvm install 3.0.0 --with-openssl-dir=$(brew --prefix openssl@3)
+```
 ---
 
 > Made with ❤️ — covers macOS, Linux, and Windows (WSL 2)
